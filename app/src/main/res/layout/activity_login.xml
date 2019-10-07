@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#005E1717"
+    android:orientation="vertical"
+    tools:context=".Activities.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blucentro"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/logoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="168dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginEnd="124dp"
+            android:contentDescription="@string/app_name"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/ic_logomulle" />
+
+        <ImageView
+            android:id="@+id/logoMull"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/logoLogin"
+            android:layout_alignStart="@+id/logoLogin"
+            android:layout_alignEnd="@+id/logoLogin"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-18dp"
+            android:layout_marginEnd="1dp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/ic_logo_final_mull___acento" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputEmail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            app:hintTextColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_login"
+                android:hint="@string/emailUser"
+                app:hintTextColor="#FFFFFF"
+                android:inputType="textEmailAddress"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputSenha"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtinputEmail"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_senha"
+                android:ems="10"
+                android:hint="@string/passUser"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtinputSenha"
+            android:layout_centerInParent="true"
+            android:text="@string/botaoEntra"
+            android:backgroundTint="#FFFFFF">
+
+        </Button>
+
+        <ImageView
+            android:id="@+id/btnInstagram"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/edRegistro"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="271dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="43dp"
+            android:contentDescription="@string/btnInstagram"
+            app:srcCompat="@drawable/instagram_logo" />
+
+        <ImageView
+            android:id="@+id/btnFacebook"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/edRegistro"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginEnd="260dp"
+            android:layout_marginBottom="42dp"
+            android:contentDescription="@string/btnFacebookLogin"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/btnLinkedin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/edRegistro"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginEnd="185dp"
+            android:layout_marginBottom="43dp"
+            android:contentDescription="@string/btnLinkedin"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/linkedin_logo" />
+
+        <ImageView
+            android:id="@+id/btnTwitter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignBottom="@id/edRegistro"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="197dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginBottom="44dp"
+            android:layout_toEndOf="@+id/btnLogin"
+            android:contentDescription="@string/btnTwitter"
+            android:gravity="center_vertical"
+            app:srcCompat="@drawable/twitterlogo" />
+
+        <TextView
+            android:id="@+id/edRegistro"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnLogin"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="true"
+            android:hint="@string/btnRegistro"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

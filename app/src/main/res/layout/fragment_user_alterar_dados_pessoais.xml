@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/UserDadosPessoais"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    android:background="@drawable/background_mull"
+    tools:context=".Fragments.UserAlterarDadosPessoaisFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutAlterarDados"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutlogos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="4dp">
+
+                <ImageView
+                    android:id="@+id/logoMull"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/ic_logo_final_mull___acento" />
+
+                <ImageView
+                    android:id="@+id/logoLogin"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="@string/todo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:srcCompat="@drawable/ic_logomulle" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textDadosPessoais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="Dados Pessoais"
+                android:textAlignment="center"
+                android:padding="40dp"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/logoMull"
+                app:layout_constraintStart_toEndOf="@+id/logoLogin" />
+
+            <TextView
+                android:id="@+id/edEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_login"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:text="aaa"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputCEP"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutAlterarDados"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edCEP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/cepUser"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputEndereco"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtinputCEP"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logradouroUser"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputNumero"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtinputEndereco"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/logradouroNumero"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputCidade"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtinputNumero"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edCidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/localidadeUser"
+                android:ems="10"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputBairro"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtinputCidade"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edBairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/bairroUser"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtinputComplemento"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtinputBairro"
+            android:layout_centerInParent="true"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:errorEnabled="true"
+            tools:layout_conversion_absoluteHeight="63dp"
+            tools:layout_conversion_absoluteWidth="143dp"
+            tools:layout_editor_absoluteX="187dp"
+            tools:layout_editor_absoluteY="283dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edComplemento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/complementoUser"
+                android:inputType="textShortMessage"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:layout_conversion_absoluteHeight="35dp"
+                tools:layout_conversion_absoluteWidth="143dp"
+                tools:layout_editor_absoluteX="187dp"
+                tools:layout_editor_absoluteY="295dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinputSpinner"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtinputComplemento"
+                android:layout_centerInParent="true"
+                android:hint="@string/ufUser"
+                android:layout_marginTop="20dp">
+
+            <Spinner
+                android:id="@+id/edUF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:popupBackground="@drawable/background_mull"
+                android:hint="@string/ufUser"
+                android:tooltipText="@string/ufUser"
+                android:spinnerMode="dropdown"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnAlterar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:text="@string/botaoAlterar" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="3dp"
+        app:cardUseCompatPadding="true"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tipoColetaRoupas"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="140dp"
+            android:contentDescription="@string/tipocoletaroupas"
+            android:src="@drawable/ic_sweatercolored"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/tipoColetaReciclavel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="140dp"
+            android:contentDescription="@string/tiporeciclavel"
+            android:src="@drawable/ic_recycle_bincolored"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/titleitemColeta"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGreen"
+                    android:maxLines="1"
+                    android:hint="@string/tblDiaColeta"/>
+
+                <androidx.appcompat.widget.AppCompatCheckedTextView
+                    android:id="@+id/titletipoColeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/colorGreen"
+                    android:hint="@string/coleta"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/listitemColetaDia"
+                android:text="@string/tblDiaColeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.appcompat.widget.AppCompatCheckedTextView
+                android:id="@+id/titleitemHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorGreen"
+                android:hint="@string/tblHorario"/>
+
+            <TextView
+                android:id="@+id/listitemColetaHorarioInicio"
+                android:text="@string/tblHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/listitemColetaHorarioFinal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

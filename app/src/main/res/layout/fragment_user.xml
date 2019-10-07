@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_mull"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.UserFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@android:dimen/notification_large_icon_height"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/layoutAlterarDados"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutlogos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="4dp">
+
+            <ImageView
+                android:id="@+id/logoMull"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_logo_final_mull___acento" />
+
+            <ImageView
+                android:id="@+id/logoLogin"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:srcCompat="@drawable/ic_logomulle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="@string/configuracoes"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/trocarDadosPessoais"
+            android:layout_width="230dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_supervisor_account_black_24dp"
+            android:text="@string/dados_pessoais"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:padding="6dp"
+            android:maxLines="1"
+            android:drawablePadding="1dp"
+            android:background="@color/cardview_light_background"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/trocarDadosdaConta"
+            android:layout_width="230dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_vpn_key_black_24dp"
+            android:text="@string/dados_da_conta"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:padding="6dp"
+            android:maxLines="1"
+            android:drawablePadding="6dp"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+</FrameLayout>

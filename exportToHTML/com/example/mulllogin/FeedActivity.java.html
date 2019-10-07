@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>FeedActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+FeedActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.example.mull</span><span class="s0">;</span>
+import <span class="s1">android.net.Uri</span><span class="s0">;</span>
+import <span class="s1">android.os.Bundle</span><span class="s0">;</span>
+import <span class="s1">androidx.fragment.app.Fragment</span><span class="s0">;</span>
+import <span class="s1">com.google.android.material.bottomnavigation.BottomNavigationView</span><span class="s0">;</span>
+import <span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s0">;</span>
+import <span class="s1">androidx.annotation.NonNull</span><span class="s0">;</span>
+import <span class="s1">androidx.fragment.app.FragmentManager</span><span class="s0">;</span>
+
+import <span class="s1">android.view.MenuItem</span><span class="s0">;</span>
+import <span class="s1">android.widget.TextView</span><span class="s0">;</span>
+
+public class <span class="s1">FeedActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity</span>
+<span class="s0">implements </span><span class="s1">Feed.OnFragmentInteractionListener</span><span class="s0">, </span><span class="s1">MullFragment.OnFragmentInteractionListener</span><span class="s0">, </span><span class="s1">ChatFragment.OnFragmentInteractionListener </span><span class="s0">, </span><span class="s1">UserFragment.OnFragmentInteractionListener{</span>
+
+    <span class="s0">public </span><span class="s1">TextView mTextMessage</span><span class="s0">;</span>
+    public final static <span class="s1">Fragment fragment1 = </span><span class="s0">new </span><span class="s1">Feed()</span><span class="s0">;</span>
+    public final static <span class="s1">Fragment fragment2 = </span><span class="s0">new </span><span class="s1">MullFragment()</span><span class="s0">;</span>
+    public final static <span class="s1">Fragment fragment3 = </span><span class="s0">new </span><span class="s1">ChatFragment()</span><span class="s0">;</span>
+    public final static <span class="s1">Fragment fragment4 = </span><span class="s0">new </span><span class="s1">UserFragment()</span><span class="s0">;</span>
+
+    final <span class="s1">FragmentManager fm = getSupportFragmentManager()</span><span class="s0">;</span>
+
+     <span class="s1">Fragment active = fragment1</span><span class="s0">;</span>
+
+    private <span class="s1">BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener</span>
+            = <span class="s0">new </span><span class="s1">BottomNavigationView.OnNavigationItemSelectedListener() {</span>
+
+        @Override
+        <span class="s0">public boolean </span><span class="s1">onNavigationItemSelected(@NonNull MenuItem item) {</span>
+            <span class="s0">switch </span><span class="s1">(item.getItemId()) {</span>
+                <span class="s0">case </span><span class="s1">R.id.navigation_mull:</span>
+                <span class="s2">//    mTextMessage.setText(R.string.title_feed);</span>
+                    <span class="s1">fm.beginTransaction().hide(active).show(fragment1).commit()</span><span class="s0">;</span>
+                    <span class="s1">active = fragment1</span><span class="s0">;</span>
+                    return true;
+                case <span class="s1">R.id.navigation_feed:</span>
+                <span class="s2">//    mTextMessage.setText(R.string.title_mull);</span>
+                    <span class="s1">fm.beginTransaction().hide(active).show(fragment2).commit()</span><span class="s0">;</span>
+                    <span class="s1">active = fragment2</span><span class="s0">;</span>
+                    return true;
+                case <span class="s1">R.id.navigation_chat:</span>
+              <span class="s2">//      mTextMessage.setText(R.string.title_chat);</span>
+                    <span class="s1">fm.beginTransaction().hide(active).show(fragment3).commit()</span><span class="s0">;</span>
+                    <span class="s1">active = fragment3</span><span class="s0">;</span>
+                    return true;
+                case <span class="s1">R.id.navigation_conta:</span>
+                    mTextMessage.setText(R.string.title_conta)<span class="s0">;</span>
+                    <span class="s1">fm.beginTransaction().hide(active).show(fragment4).commit()</span><span class="s0">;</span>
+                    <span class="s1">active = fragment4</span><span class="s0">;</span>
+                    return true;
+
+            <span class="s1">}</span>
+            <span class="s0">return false;</span>
+        <span class="s1">}</span>
+    }<span class="s0">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">onFragmentInteraction(Uri uri){</span>
+        <span class="s2">//you can leave it empty</span>
+    <span class="s1">}</span>
+
+    @Override
+    <span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s0">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s0">;</span>
+        <span class="s1">setContentView(R.layout.activity_feed)</span><span class="s0">;</span>
+        <span class="s1">BottomNavigationView navView = findViewById(R.id.nav_view)</span><span class="s0">;</span>
+        <span class="s1">mTextMessage = findViewById(R.id.message)</span><span class="s0">;</span>
+        <span class="s1">navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)</span><span class="s0">;</span>
+        <span class="s1">fm.beginTransaction().add(R.id.main_container</span><span class="s0">, </span><span class="s1">fragment1</span><span class="s0">,</span><span class="s3">&quot;1&quot;</span><span class="s1">).commit()</span><span class="s0">;</span>
+        <span class="s1">fm.beginTransaction().add(R.id.main_container</span><span class="s0">, </span><span class="s1">fragment2</span><span class="s0">,</span><span class="s3">&quot;2&quot;</span><span class="s1">).hide(fragment2).commit()</span><span class="s0">;</span>
+        <span class="s1">fm.beginTransaction().add(R.id.main_container</span><span class="s0">, </span><span class="s1">fragment3</span><span class="s0">,</span><span class="s3">&quot;3&quot;</span><span class="s1">).hide(fragment3).commit()</span><span class="s0">;</span>
+        <span class="s1">fm.beginTransaction().add(R.id.main_container</span><span class="s0">, </span><span class="s1">fragment4</span><span class="s0">,</span><span class="s3">&quot;4&quot;</span><span class="s1">).hide(fragment2).commit()</span><span class="s0">;</span>
+
+    <span class="s1">}</span>
+
+
+}
+</pre>
+</body>
+</html>

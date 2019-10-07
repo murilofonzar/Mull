@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988630587418",
+    "firebase_url": "https://mulllogin.firebaseio.com",
+    "project_id": "mulllogin",
+    "storage_bucket": "mulllogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988630587418:android:24950884c82fae3e",
+        "android_client_info": {
+          "package_name": "com.example.mulllogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988630587418-23te5tarvc03t5l9gu9jia943f5kpvjj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mulllogin",
+            "certificate_hash": "e44cfd27fafb3821379bc479b6eca49627dd4955"
+          }
+        },
+        {
+          "client_id": "988630587418-lr78l1867v2l0vst91m6ii56icjhqd92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMSYEvWeTJeF6S4wRqBbzn-ZiSp1EF0TA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988630587418-lr78l1867v2l0vst91m6ii56icjhqd92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

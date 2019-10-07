@@ -1,0 +1,91 @@
+<resources>
+    <string name="app_name">Müll</string>
+
+    <string name="nomeUser">Nome</string>
+    <string name="emailUser">Email</string>
+    <string name="cpfUser">CPF</string>
+    <string name="cnpjUser">CNPJ</string>
+    <string name="logradouroNumero">Número</string>
+
+    <string name="cepUser">CEP</string>
+    <string name="logradouroUser">Rua</string>
+    <string name="complementoUser">Complemento</string>
+    <string name="bairroUser">Bairro</string>
+    <string name="localidadeUser">Cidade</string>
+    <string name="ufUser">UF</string>
+
+    <string name="passUser">Senha</string>
+    <string name="repassUser">Repetir Senha</string>
+
+
+    <string name="botaoEntra">Login</string>
+    <string name="botaoRegistrar">Registrar</string>
+    <string name="btnFacebookLogin">btnFacebookLogin</string>
+    <string name="btnLinkedin">btnLinkedin</string>
+    <string name="botaoAlterar">Alterar</string>
+    <string name="btnTwitter">btnTwitter</string>
+    <string name="btnInstagram">btnInstagram</string>
+    <string name="btnRegistro">Registre-se</string>
+
+    <string name="title_activity_feed">FeedActivity</string>
+
+    <string name="title_feed">Feed</string>
+    <string name="title_mull">Müll</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_conta">Conta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="todo">TODO</string>
+
+    <!-- TODO: Tabelas Mull-->
+    <string name="tblHorario">Horario</string>
+    <string name="tblDiaColeta">Dia</string>
+    <string name="continuar">Continuar</string>
+    <string name="tipo_de_coleta">Tipo de Coleta</string>
+    <string name="doacao_roupas">Roupas</string>
+    <string name="lixo_reciclado">Lixo</string>
+    <string name="datacoleta">Data</string>
+    <string name="hora_inicio">Hora Inicio</string>
+    <string name="hora_final">Hora Final</string>
+    <string name="logo_coletas">Logo Coletas</string>
+    <string name="dados_cadastrais">Dados Cadastrais</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="dados_da_conta">Dados da Conta</string>
+    <string name="dados_pessoais">Dados Pessoais</string>
+    <string name="tiporeciclavel">TipoReciclavel</string>
+    <string name="tipocoletaroupas">tipoColetaRoupas</string>
+    <string name="coleta">Coleta</string>
+    <string name="doa_o_de_roupas">Doação de Roupas</string>
+    <string name="lixo_recicl_vel">Lixo Reciclável</string>
+    <string-array name="states">
+        <item>"Estado"</item>
+        <item>"Acre (AC)"</item>
+        <item>"Alagoas (AL)"</item>
+        <item>"Amapá (AP)"</item>
+        <item>"Amazonas (AM)"</item>
+        <item>"Bahia (BA)"</item>
+        <item>"Ceará (CE)"</item>
+        <item>"Distrito Federal (DF)"</item>
+        <item>"Espírito Santo (ES)"</item>
+        <item>"Goiás (GO)"</item>
+        <item>"Maranhão (MA)"</item>
+        <item>"Mato Grosso (MT)"</item>
+        <item>"Mato Grosso do Sul (MS)"</item>
+        <item>"Minas Gerais (MG)"</item>
+        <item>"Pará (PA)"</item>
+        <item>"Paraíba (PB)"</item>
+        <item>"Paraná (PR)"</item>
+        <item>"Pernambuco (PE)"</item>
+        <item>"Piauí (PI)"</item>
+        <item>"Rio de Janeiro (RJ)"</item>
+        <item>"Rio Grande do Norte (RN)"</item>
+        <item>"Rio Grande do Sul (RS)"</item>
+        <item>"Rondônia (RO)"</item>
+        <item>"Roraima (RR)"</item>
+        <item>"Santa Catarina (SC)"</item>
+        <item>"São Paulo (SP)"</item>
+        <item>"Sergipe (SE)"</item>
+        <item>"Tocantins (TO)"</item>
+    </string-array>
+
+</resources>
